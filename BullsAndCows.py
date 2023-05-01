@@ -5,20 +5,20 @@ def generate_numbers():
     numbers = []
     i = 0
     new_number = 0
-    while i < 3:
+    while i < 4:
         new_number = randint(0, 9)
         if new_number not in numbers:
             numbers.append(new_number)
             i += 1
-    print("0과 9 사이의 서로 다른 숫자 3개를 랜덤한 순서로 뽑았습니다.\n")
+    print("0과 9 사이의 서로 다른 숫자 4개를 랜덤한 순서로 뽑았습니다.\n")
     return numbers
 
 
 def take_guess():
-    print("숫자 3개를 하나씩 차례대로 입력하세요.")
+    print("숫자 4개를 하나씩 차례대로 입력하세요.")
     i = 0
     new_guess = []
-    while i < 3:
+    while i < 4:
         gue_number = int(input("{}번째 숫자를 입력하세요: ".format(i + 1)))
         if gue_number > 9:
             print("범위를 벗어나는 숫자입니다. 다시 입력하세요.")
@@ -65,4 +65,4 @@ while 1:
     else:
         tries += 1
 
-print("축하합니다. {}번 만에 숫자 3개의 값과 위치를 모두 맞추셨습니다.".format(tries))
+print("축하합니다. {}번 만에 숫자 4개의 값과 위치를 모두 맞추셨습니다.".format(tries))
